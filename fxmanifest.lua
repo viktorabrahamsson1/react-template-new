@@ -8,15 +8,19 @@ author "viktor"
 version "1"
 
 
-
-
 ui_page 'web/build/index.html'
 
 client_scripts {
 	'client/*.lua'
 }
 server_scripts {
-	'server/*.lua'
+	'server/*.lua',
+	'@oxmysql/lib/MySQL.lua'
+}
+
+shared_scripts {
+	'shared/*.lua',
+	'@ox_lib/init.lua'
 }
 
 files {
